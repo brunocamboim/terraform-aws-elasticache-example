@@ -3,8 +3,8 @@ resource "aws_elasticache_subnet_group" "subnet-group-elasticache" {
   subnet_ids = [for s in data.aws_subnet.subnets-main-vpc : s.id] 
 }
 
-resource "aws_elasticache_cluster" "elasticache-cluster-plataforma-a" {
-  cluster_id           = "elasticache-cluster-plataforma-a"
+resource "aws_elasticache_cluster" "elasticache-cluster" {
+  cluster_id           = "elasticache-cluster"
   engine               = "redis"
   node_type            = var.elasticache_node_type
   num_cache_nodes      = 1  

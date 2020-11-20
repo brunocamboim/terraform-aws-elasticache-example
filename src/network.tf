@@ -1,5 +1,5 @@
 resource "aws_security_group" "sg-elasticache-cluster" {
-  name        = "sg_elasticache_cluster_plataformaa"
+  name        = "sg_elasticache_cluster"
   description = "Allow access to elasticache service"
   vpc_id      = data.aws_vpc.main-vpc.id
 
